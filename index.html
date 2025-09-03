@@ -3,48 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="./src/output.css" rel="stylesheet">
   <title>Opay</title>
 </head>
 <body>
-  <nav class="flex gap-15 h-18 w-100% bg-gray-50 pt-5 ">
-    <img class="h-9 w-45 ml-25 mr-120 " src="./src/image/logo-f52060c7.png" alt="">
-    <ul class="hidden md:flex sm:flex-column gap-10 cursor-pointer" id="mobile-menu">
-      <li > <a class="font-semibold" style="font-size: 22px; list-style-type: none;" href="">Home</a></li>
-      <li ><a class="" style="font-size: 20px; list-style-type: none;" href="" >Payment</a></li>
-      <li ><a style="font-size: 20px; list-style-type: none;" href="">Solutions</a></li>
-      <li ><a style="font-size: 20px; list-style-type: none;" href="">About Us</a></li>
-    </ul>
+  <header class="md:h-screen md:bg-[#eff1ee] bg-[#bbf8e8bd] relative font-[Roboto]">
+    <nav class="flex justify-between items-center w-100% bg-white md:px-28 px-6 py-4">
+      <img class="md:h-8 h-6 w-fit" src="./src/image/logo-f52060c7.png" alt="Logo">
 
-    
-      <img class=" h-5 w-5 static lg:hidden focus:outline-none  " src="./src/image/menu.png" alt=""id="menu-btn">
-    
-    
-    <!-- <div class=" hidden flex-col peer-checked:flex md:flex md:flex-row md:w-auto" id="mobile-menu" >
-      <img class="h-9 w-45 ml-25 mr-120 " src="./src/image/logo-f52060c7.png" alt="">
-      <ul class="hidden md:flex gap-10 cursor-pointer">
-        <li > <a class="font-semibold block" style="font-size: 22px; list-style-type: none;" href="">Home</a></li>
-        <li ><a class="" style="font-size: 20px; list-style-type: none;" href="" >Payment</a></li>
-        <li ><a style="font-size: 20px; list-style-type: none;" href="">Solutions</a></li>
-        <li ><a style="font-size: 20px; list-style-type: none;" href="">About Us</a></li>
+      <!-- Desktop Menu  -->
+      <ul class="md:flex hidden gap-10" id="desktop-menu">
+        <li > <a class="font-semibold list-none text-xl" href="">Home</a></li>
+        <li ><a class="list-none text-xl" href="" >Payment</a></li>
+        <li ><a class="list-none text-xl" href="">Solutions</a></li>
+        <li ><a class="list-none text-xl" href="">About Us</a></li>
       </ul>
-    </div> -->
-    
 
-  </nav>
+      <!-- Mobile Menu -->
+      <ul class="flex md:hidden flex-col gap-8 bg-[#1dcf9f] w-full text-white absolute top-[59px] left-0 px-4 py-8" id="mobile-menu">
+        <a href="#">
+          <li class="flex justify-between items-center"> 
+            <p class="font-semibold list-none text-xl">Home</p>
+
+          <!-- Forward arrow  -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-gray-300"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+          </li>
+        </a>
+
+        <a href="#">
+          <li class="flex justify-between items-center">
+            <p class="list-none text-xl">Payment</p>
+            
+            <!-- The forward arrow  -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-gray-300"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+          </li>
+        </a>
+
+        <a href="#">
+          <li class="flex justify-between items-center">
+            <p class="list-none text-xl">Solutions</p>
+            
+            <!-- The forward arrow  -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-gray-300"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+          </li>
+        </a>
+
+
+        <a href="#">
+          <li class="flex justify-between items-center">
+            <p class="list-none text-xl">About Us</p>
+            
+            <!-- The forward arrow  -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-gray-300"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+          </li>
+        </a>
+      </ul>
+
+      
+      <div id="menu-btn" class="h-5 w-5 static md:hidden">
+        <img class="" src="./src/image/menu.png" alt="hambuger" id="hambuger">
+        <img class="" src="./src/image/close.png" alt="close" id="close" >
+      </div>
+    </nav>
+
+    <img src="./src/image/banner-588cbfbc.png" alt="hero-image" class="block md:absolute static md:right-0 md:bottom-0">
+
+    <div class="md:mx-28 md:my-24 text-[#210f60] flex flex-col md:gap-8 gap-4 h-1/2 md:bg-transparent bg-white md:p-0 p-4">
+      <h1 class="md:text-6xl text-2xl md:font-[900] font-semibold md:w-5/12">Reliable, Fast & Safe Payments</h1>
+      <p class="font-medium md:font-normal md:text-[20px] md:tracking-wider md:w-5/12">Get omnichannel payment solutions to grow your business better!</p>
+
+      <div class="flex md:flex-col flex-col-reverse md:gap-8 gap-4">
+        <button class="bg-[#1dcf9f] md:px-12 px-8 md:py-4 py-2 rounded-4xl w-fit text-white md:font-extrabold md:text-3xl">Contact Us</button>
+  
+        <div class="flex md:flex-row flex-col md:gap-4 md:items-center md:font-extrabold font-light md:text-lg text-[10px]">
+          <div class="flex items-center gap-2">
+            <p><span class="md:hidden inline">Fully </span>Licensed by CBN</p>
+            <img src="./src/image/icon-cbn-9e0900ac.png" alt="cbn" class="md:h-8 h-4">
+          </div>
+  
+          <div class="flex items-center gap-2 md:border-l-1 md:pl-4 py-0 h-6">
+            <p><span class="md:hidden inline">Deposits </span>Insured by</p>
+            <img src="./src/image/icon-ndic-1b3b5877.png" alt="ndic" class="md:h-8 h-4">
+          </div>
+        </div>  
+      </div>
+    </div>
+  </header>
 
 
   
 
-  
-  <script>
-    const btn = document.getElementById("menu-btn");
-    const menu = document.querySelector("mobile-menu");
-
-    btn.addEventListener("click", () => {
-      menu-bar.classList.toggle("hidden");
-    });
-  </script>
-
+  <script src="index.js"></script>
 </body>
 </html>
